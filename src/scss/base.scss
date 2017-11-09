@@ -1,0 +1,141 @@
+//颜色
+$teal: #00BA9E;
+$dark: #666;
+$white: #fff;
+$red: #DB2828;
+$orange: #fd6400;
+$yellow: #FBBD08;
+$olive: #B5CC18;
+$teal: #00B5AD;
+$blue: #2185D0;
+$violet: #6435C9;
+$purple: #A333C8;
+$pink: #E03997;
+$gray: #a0a0a0;
+$black: #000;
+$lightgrey: #83939a;
+$sk-sidebar-bg: #2e81d7;
+$sk-skyblue-bg: #6da7e3;
+$sk-sidebar-color: #bdcbd2; // 字体
+@mixin wh($w:100%,$h:100%) {
+    width: $w;
+    height: $h;
+}
+@mixin toe {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+blockquote,
+body,
+button,
+code,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+legend,
+li,
+ol,
+p,
+pre,
+td,
+textarea,
+th,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fff;
+    color: #555;
+    font-size: 14px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+caption,
+td,
+th {
+    font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+a {
+    color: #555;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    border: none;
+}
+
+li,
+ol,
+ul {
+    list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: 14px Verdana,Helvetica,Arial,sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+html {
+    overflow-y: scroll;
+}
+/* css common */
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}

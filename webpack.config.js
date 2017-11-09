@@ -1,0 +1,71 @@
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+module.exports = {
+	entry: './src/js/index.js',
+	output: {
+		// filename: 'bundle-[hash].js',
+		filename: 'bundle.js',
+		path: path.resolve(__dirname, 'dist')
+	},
+	devtool: 'eval-source-map',
+	devServer: {
+		contentBase: "./src/html", // 本地服务器所加载的页面所在的目录
+		historyApiFallback: true, // 不跳转
+		inline: true, // 实时刷新
+		port: 9090
+	},
+	module: {
+		rules: [{
+				test: /\.js$/,
+				use: {
+					loader: "babel-loader"
+				},
+				include: path.join(__dirname, 'src')
+			},
+			// {
+			// 	test: /\.scss$/,
+			// 	use: ExtractTextPlugin.extract({
+			// 		fallback: "style-loader",
+			// 		use: ["css-loader", "sass-loader"]
+			// 	})
+			// },
+			{
+				test: /\.scss$/,
+				use: [{
+					loader: "style-loader"
+				}, {
+					loader: "css-loader"
+				}, {
+					loader: "sass-loader"
+				}]
+			}
+		]
+	},
+	plugins: [
+		// 设置生产环境全局变量，以便告诉所有类库，多虑不必要的代码
+		// new webpack.DefinePlugin({
+		// 	'process.env': {
+		// 		'NODE_ENV': JSON.stringify('production')
+		// 	}
+		// }),
+		new HtmlWebpackPlugin({
+			template: __dirname + "/src/html/index.tmpl.html",
+			// minify: {
+			// 	removeComments: true, //去注释
+			// 	collapseWhitespace: true, //压缩空格
+			// 	removeAttributeQuotes: true //去除属性引用
+			// }
+		}),
+		// new webpack.optimize.UglifyJsPlugin({
+		// 	comments: false, //去掉注释
+		// 	compress: {
+		// 		warnings: false
+		// 	}
+		// }),
+		// new ExtractTextPlugin("style.css"),
+		new webpack.HotModuleReplacementPlugin()
+	]
+};
