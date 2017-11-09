@@ -25,14 +25,14 @@ module.exports = {
 				},
 				include: path.join(__dirname, 'src')
 			},
-			// {
-			// 	test: /\.scss$/,
-			// 	use: ExtractTextPlugin.extract({
-			// 		fallback: "style-loader",
-			// 		use: ["css-loader", "sass-loader"]
-			// 	})
-			// },
 			{
+				test: /\.css$/,
+				use: [{
+					loader: "style-loader"
+				}, {
+					loader: "css-loader"
+				}]
+			}, {
 				test: /\.scss$/,
 				use: [{
 					loader: "style-loader"
@@ -41,6 +41,9 @@ module.exports = {
 				}, {
 					loader: "sass-loader"
 				}]
+			}, {
+				test: /\.(png|woff|woff2|eot|ttf|svg|jpg|gif)$/,
+				loader: 'url-loader?limit=100000'
 			}
 		]
 	},

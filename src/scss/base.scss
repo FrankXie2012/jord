@@ -13,10 +13,43 @@ $purple: #A333C8;
 $pink: #E03997;
 $gray: #a0a0a0;
 $black: #000;
-$lightgrey: #83939a;
+$lightgray: #f7f7f9;
 $sk-sidebar-bg: #2e81d7;
 $sk-skyblue-bg: #6da7e3;
 $sk-sidebar-color: #bdcbd2; // 字体
+
+$basic: $sk-sidebar-bg;
+$base-dark: $sk-skyblue-bg;
+$radius: 5px;
+$gap: 10px;
+
+// 工具类
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+    *zoom: 1;
+}
+
 @mixin wh($w:100%,$h:100%) {
     width: $w;
     height: $h;
@@ -27,6 +60,8 @@ $sk-sidebar-color: #bdcbd2; // 字体
     white-space: nowrap;
 }
 
+
+// 页面初始化
 blockquote,
 body,
 button,
@@ -99,7 +134,7 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 img {
@@ -125,17 +160,4 @@ table {
 
 html {
     overflow-y: scroll;
-}
-/* css common */
-
-.clearfix:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
-
-.clearfix {
-    *zoom: 1;
 }
