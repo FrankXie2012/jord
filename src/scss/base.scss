@@ -18,8 +18,8 @@ $sk-sidebar-bg: #2e81d7;
 $sk-skyblue-bg: #6da7e3;
 $sk-sidebar-color: #bdcbd2; // 字体
 
-$basic: $sk-sidebar-bg;
-$base-dark: $sk-skyblue-bg;
+$basic: $red;
+$base-dark: $gray;
 $radius: 5px;
 $gap: 10px;
 
@@ -96,7 +96,7 @@ body {
     background: #fff;
     color: #555;
     font-size: 14px;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-family: "微软雅黑", Verdana, Arial, Helvetica, sans-serif;
 }
 
 caption,

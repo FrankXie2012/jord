@@ -2,187 +2,200 @@
 @import "override";
 
 .wrap {
-    width: 1000px;
-    margin: 0 auto;
+  width: 1000px;
+  margin: 0 auto;
 }
 // 组件样式
 
 .text {
-    height: 24px;
-    line-height: 24px;
-    padding: 0 4px;
-    color: $gray;
-    background: $white;
-    border: 1px solid $gray;
-    border-radius: $radius;
-    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 4px;
+  color: $gray;
+  background: $white;
+  border: 1px solid $gray;
+  border-radius: $radius;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 
-    &:focus {
-        border-color: $gray;
-        box-shadow: 0 0 5px 0 $blue;
-    }
+  &:focus {
+    border-color: $gray;
+    box-shadow: 0 0 5px 0 $blue;
+  }
 }
 
 .btn {
-    background: $basic;
-    border: none;
-    color: $white;
-    font-weight: 400;
-    padding: 0 10px;
-    height: 24px;
-    line-height: 24px;
-    border-radius: $radius;
-    cursor: pointer;
+  background: $basic;
+  border: none;
+  color: $white;
+  font-weight: 400;
+  padding: 0 10px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: $radius;
+  cursor: pointer;
 
-    &:hover {
-        background: $base-dark;
-        transition: background ease-in-out 0.15s;
-    }
+  &:hover {
+    background: $base-dark;
+    transition: background ease-in-out 0.15s;
+  }
 }
 
 .list {
+  li {
+    line-height: 24px;
+    height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    a {
+      transition: color ease-in-out 0.15s;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+  // 带日期的列表
+  &.date {
     li {
-        line-height: 24px;
-        height: 24px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+      padding-right: 85px;
 
-        a {
-            transition: color ease-in-out 0.15s;
-            &:hover {
-                color: $orange;
-            }
-        }
+      .date-span {
+        position: absolute;
+        right: $gap;
+        font-size: 12px;
+      }
     }
-
-    // 带日期的列表
-    &.date {
-        li {
-            padding-right: 85px;
-            .date-span {
-                position: absolute;
-                right: $gap;
-                font-size: 12px;
-            }
-        }
-    }
+  }
 }
 
 .card {
-    position: relative;
-    min-height: 200px;
-    word-wrap: break-word;
-    border: 1px solid $gray;
-    margin-bottom: $gap;
+  position: relative;
+  min-height: 200px;
+  word-wrap: break-word;
+  border: 1px solid $gray;
+  margin-bottom: $gap;
 
-    .card-head {
-        height: 24px;
-        line-height: 24px;
-        padding: 0 10px;
-        background: $basic;
-        color: $white;
+  .card-head {
+    height: 24px;
+    line-height: 24px;
+    padding: 0 10px;
+    background: $basic;
+    color: $white;
 
-        span {
-            font-weight: bold;
-            padding-right: 30px;
-        }
-
-        .card-tool {
-            float: right;
-            color: $white;
-
-            &:hover {
-                color: $orange;
-            }
-        }
+    span {
+      font-weight: bold;
+      padding-right: 30px;
     }
 
-    .card-body {
-        padding: 10px;
+    .card-tool {
+      float: right;
+      color: $white;
+
+      &:hover {
+        color: $orange;
+      }
     }
+  }
+
+  .card-body {
+    padding: 10px;
+  }
 }
 // 布局样式
 
 .header {
-    .banner {
-        height: 120px;
+  .banner {
+    color: $white;
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 120px;
+    padding-left: 80px;
+    height: 120px;
+    background: $basic url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1510845271&di=86b6a4e21d8a9338c8e49eb05a0eb15b&imgtype=jpg&er=1&src=http%3A%2F%2Fa4.att.hudong.com%2F31%2F42%2F01300000247462122303424708872.jpg') center right no-repeat;
+  }
+
+  .menu {
+    height: 30px;
+    line-height: 30px;
+
+    li {
+      float: left;
+      width: 10%;
+      text-align: center;
+
+      a {
+        border: 1px solid $base-dark;
         background: $basic;
-    }
+        color: $white;
+        display: block;
 
-    .menu {
-        height: 30px;
-        line-height: 30px;
-
-        li {
-            float: left;
-            width: 10%;
-            text-align: center;
-
-            a {
-                border: 1px solid $basic;
-                display: block;
-
-                &:hover {
-                    background: $base-dark;
-                    color: $white;
-                    transition: background 0.15s ease-in-out, color 0.15s ease-in-out;
-                }
-            }
+        &:hover {
+          background: $base-dark;
+          color: $white;
+          transition: background 0.15s ease-in-out, color 0.15s ease-in-out;
         }
+      }
     }
+  }
 
-    .search-bar {
-        height: 34px;
-        line-height: 34px;
-        padding: 0 20px;
-        border: 1px solid $basic;
-        border-top: none;
+  .search-bar {
+    height: 34px;
+    line-height: 34px;
+    padding: 0 20px;
+    border: 1px solid $basic;
+    border-top: none;
 
-        .text {
-            width: 100px;
-        }
+    .text {
+      width: 100px;
     }
+  }
 }
 
 .body {
-    padding: $gap 0;
+  padding: $gap 0;
 }
 
 .main {
-    width: 800px;
+  width: 800px;
+  float: left;
+
+  .card {
+    width: 390px;
     float: left;
-    .card {
-        width: 390px;
-        float: left;
-        margin-right: 8px;
-    }
+    margin-right: 8px;
+  }
 }
 
 .side {
-    width: 200px;
-    float: right;
+  width: 200px;
+  float: right;
 }
 
 .carousel {
-    width: 790px;
-    height: 395px;
-    margin-bottom: $gap;
-    div {
-        height: 395px;
-        cursor: pointer;
-        // TODO
-        &.blue {
-            background: $blue;
-        }
-        &.red {
-            background: $red;
-        }
-        &.yellow {
-            background: $yellow;
-        }
-        &.teal {
-            background: $teal;
-        }
+  width: 790px;
+  margin-bottom: $gap;
+
+  div {
+    height: 360px;
+    background: $black;
+    cursor: pointer;
+
+    .helper {
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
     }
+    img {
+      vertical-align: middle;
+      margin: 0 auto;
+    }
+  }
+}
+
+.footer {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
 }

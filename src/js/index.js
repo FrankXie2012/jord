@@ -9,10 +9,9 @@ export {
 };
 
 const carousel = () => {
-
 	$('.carousel').slick({
 		autoplay: true,
-		autoplaySpeed: 2000,
+		autoplaySpeed: 3000,
 		fade: true,
 		dots: true
 	});
