@@ -1,7 +1,4 @@
-import $ from 'jquery';
-import 'slick-carousel';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import 'unslider';
 require('../scss/index.scss');
 
 export {
@@ -9,11 +6,10 @@ export {
 };
 
 const carousel = () => {
-	$('.carousel').slick({
+	$('.carousel').unslider({
 		autoplay: true,
-		autoplaySpeed: 3000,
-		fade: true,
-		dots: true
+		animation: 'fade',
+		arrows: false
 	});
 };
 

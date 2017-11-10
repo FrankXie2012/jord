@@ -1,9 +1,18 @@
 @import "base";
 
-// slick样式重写
-.slick-dots {
-    bottom: 15px;
+// unslider样式重写
+.unslider {
+    width: 790px;
+    background: $black;
+    margin-bottom: $gap;
+    overflow-x: hidden;
 }
-.slick-dotted.slick-slider {
-    margin-bottom: 10px;
+.unslider-nav {
+    padding: 20px;
+    ol {
+        text-align: right;
+        li {
+            text-indent: 9999px;
+        }
+    }
 }

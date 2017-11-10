@@ -67,6 +67,10 @@ module.exports = {
         // 	}
         // }),
         // new ExtractTextPlugin("style.css"),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        })
     ]
 };

@@ -1,5 +1,7 @@
 @import "base";
 @import "override";
+@import '~unslider/dist/css/unslider.css';
+@import '~unslider/dist/css/unslider-dots.css';
 
 .wrap {
   width: 1000px;
@@ -76,6 +78,7 @@
   word-wrap: break-word;
   border: 1px solid $gray;
   margin-bottom: $gap;
+  background: $white;
 
   .card-head {
     height: 24px;
@@ -107,13 +110,8 @@
 
 .header {
   .banner {
-    color: $white;
-    font-size: 60px;
-    font-weight: bold;
-    line-height: 120px;
-    padding-left: 80px;
     height: 120px;
-    background: $basic url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1510845271&di=86b6a4e21d8a9338c8e49eb05a0eb15b&imgtype=jpg&er=1&src=http%3A%2F%2Fa4.att.hudong.com%2F31%2F42%2F01300000247462122303424708872.jpg') center right no-repeat;
+    background: $basic url('../img/top.gif') center no-repeat;
   }
 
   .menu {
@@ -174,22 +172,17 @@
 }
 
 .carousel {
-  width: 790px;
-  margin-bottom: $gap;
+  height: 360px;
 
-  div {
+  li {
     height: 360px;
-    background: $black;
     cursor: pointer;
+    text-align: center;
 
     .helper {
       display: inline-block;
       height: 100%;
       vertical-align: middle;
-    }
-    img {
-      vertical-align: middle;
-      margin: 0 auto;
     }
   }
 }
