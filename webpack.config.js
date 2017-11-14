@@ -4,7 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-    entry: './src/js/index.js',
+    entry: {
+        index: 'src/js/index.js'
+    },
     output: {
         // filename: 'bundle-[hash].js',
         filename: 'bundle.js',
@@ -13,7 +15,7 @@ module.exports = {
     devtool: 'eval-source-map',
     // devtool: 'source-map',
     devServer: {
-        contentBase: "./src/html", // 本地服务器所加载的页面所在的目录
+        contentBase: "src/html", // 本地服务器所加载的页面所在的目录
         historyApiFallback: true, // 不跳转
         inline: true, // 实时刷新
         port: 9090
@@ -67,18 +69,30 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: __dirname + "/src/html/index.tmpl.html",
-            minify: {
-                removeComments: true, //去注释
-                collapseWhitespace: true, //压缩空格
-                removeAttributeQuotes: true //去除属性引用
-            }
+            // minify: {
+            //     removeComments: true, //去注释
+            //     collapseWhitespace: true, //压缩空格
+            //     removeAttributeQuotes: true //去除属性引用
+            // },
+            filename: 'index.html',
+            chunks: ['index']
         }),
-        new webpack.optimize.UglifyJsPlugin({
-            comments: false, //去掉注释
-            compress: {
-                warnings: false
-            }
+        new HtmlWebpackPlugin({
+            template: __dirname + "/src/html/list.tmpl.html",
+            filename: 'list.html',
+            chunks: ['index']
         }),
+        new HtmlWebpackPlugin({
+            template: __dirname + "/src/html/news.tmpl.html",
+            filename: 'news.html',
+            chunks: ['index']
+        }),
+        // new webpack.optimize.UglifyJsPlugin({
+        //     comments: false, //去掉注释
+        //     compress: {
+        //         warnings: false
+        //     }
+        // }),
         new ExtractTextPlugin("style.css"),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.ProvidePlugin({

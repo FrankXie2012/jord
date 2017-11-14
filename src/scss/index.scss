@@ -226,3 +226,57 @@ a {
     text-align: center;
     margin-top: 30px;
 }
+
+// 列表页
+
+.news-list {
+    padding: 0 20px;
+    &.list.date li .date-span {
+        right: 30px;
+    }
+}
+.pagination {
+    text-align: right;
+    padding: 30px 20px 10px;
+}
+.page-btn {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #DB2828;
+    background: #fff;
+    color: #DB2828;
+    cursor: pointer;
+    text-align: center;
+    transition: color ease-in-out 0.15s, background ease-in-out 0.15s;
+    border-radius: 3px;
+    &:hover {
+        background: #DB2828;
+        color: #fff;
+    }
+}
+
+.news-box {
+    padding: 0 80px;
+}
+.news-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px;
+}
+.news-detail {
+    text-align: right;
+}
+.news-img img{
+    margin: 30px auto;
+    display: block;
+    width: 600px;
+}
+.news-text {
+    width: 100%;
+    line-height: 24px;
+    font-size: 16px;
+    white-space: pre-wrap;
+}
