@@ -4,46 +4,46 @@
 @import '~unslider/dist/css/unslider-dots.css';
 
 .wrap {
-  width: 1000px;
-  margin: 0 auto;
+    width: 1000px;
+    margin: 0 auto;
 }
 // 组件样式
 
 .text {
-  height: 24px;
-  line-height: 24px;
-  padding: 0 4px;
-  color: $gray;
-  background: $white;
-  border: 1px solid $gray;
-  border-radius: $radius;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 4px;
+    color: $gray;
+    background: $white;
+    border: 1px solid $gray;
+    border-radius: $radius;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 
-  &:focus {
-    border-color: $gray;
-    box-shadow: 0 0 5px 0 $blue;
-  }
+    &:focus {
+        border-color: $gray;
+        box-shadow: 0 0 5px 0 $blue;
+    }
 }
 
 .btn {
-  background: $basic;
-  border: none;
-  color: $white;
-  font-weight: 400;
-  padding: 0 10px;
-  height: 24px;
-  line-height: 24px;
-  border-radius: $radius;
-  cursor: pointer;
+    background: $basic;
+    border: none;
+    color: $white;
+    font-weight: 400;
+    padding: 0 10px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: $radius;
+    cursor: pointer;
 
-  &:hover {
-    background: $base-dark;
-    transition: background ease-in-out 0.15s;
-  }
+    &:hover {
+        background: $base-dark;
+        transition: background ease-in-out .15s;
+    }
 }
 
 a {
-    transition: color ease-in-out 0.15s;
+    transition: color ease-in-out .15s;
 
     &:hover {
         color: $orange;
@@ -51,166 +51,209 @@ a {
 }
 
 .list {
-  li {
-    line-height: 24px;
-    height: 24px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  // 带日期的列表
-  &.date {
     li {
-      padding-right: 85px;
+        line-height: 24px;
+        height: 24px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
 
-      .date-span {
-        position: absolute;
-        right: $gap;
-        font-size: 12px;
-      }
+        a {
+            padding-left: 20px;
+            background: url("../img/icon_dot.png") left center no-repeat;
+
+            &:hover {
+                background-image: url("../img/ball.png");
+            }
+        }
     }
-  }
+    // 带日期的列表
+    &.date {
+        li {
+            padding-right: 85px;
+
+            .date-span {
+                position: absolute;
+                right: $gap;
+                font-size: 12px;
+            }
+        }
+    }
+
+    &.block {
+        li {
+            height: 30px;
+            line-height: 30px;
+            padding: $gap;
+
+            a {
+                display: block;
+                background: $basic;
+                border: 1px solid $basic;
+                color: $white;
+                border-radius: $radius;
+                text-indent: 30px;
+
+                &:hover {
+                    background: $white;
+                    color: $basic;
+                }
+            }
+        }
+    }
 }
 
 .card {
-  position: relative;
-  min-height: 200px;
-  word-wrap: break-word;
-  border: 1px solid $gray;
-  margin-bottom: $gap;
-  background: $white;
-  // box-shadow: 3px 3px 3px $gray;
+    position: relative;
+    min-height: 200px;
+    word-wrap: break-word;
+    border: 1px solid $gray;
+    margin-bottom: $gap;
+    background: $white;
+    box-shadow: 3px 3px 3px #ccc;
 
-  .card-head {
-    height: 30px;
-    line-height: 30px;
-    padding: 0 10px;
-    background: $basic;
-    color: $white;
+    .card-head {
+        height: 30px;
+        line-height: 30px;
+        padding: 0 10px;
+        color: $white;
+        background: -webkit-linear-gradient(left, $basic ,$white);
+        /* Safari 5.1 - 6.0 */
+        background: -o-linear-gradient(right, $basic, $white);
+        /* Opera 11.1 - 12.0 */
+        background: -moz-linear-gradient(right, $basic, $white);
+        /* Firefox 3.6 - 15 */
+        background: linear-gradient(to right, $basic ,$white);
+        /* 标准的语法 */
+        span {
+            padding-left: 25px;
+            background: url("../img/icon_board.png") left center no-repeat;
+            font-weight: bold;
+            padding-right: 30px;
+        }
 
-    span {
-      font-weight: bold;
-      padding-right: 30px;
+        .card-tool {
+            float: right;
+            color: $dark;
+
+            &:hover {
+                color: $orange;
+            }
+        }
     }
 
-    .card-tool {
-      float: right;
-      color: $white;
-
-      &:hover {
-        color: $gray;
-      }
+    .card-body {
+        padding: 10px;
     }
-  }
-
-  .card-body {
-    padding: 10px;
-  }
 }
 // 布局样式
 
 .header {
-  .banner {
-    height: 120px;
-    background: $basic url('../img/top.gif') center no-repeat;
-  }
+    .banner {
+        height: 120px;
+        background: $basic url('../img/top.gif') center no-repeat;
+    }
 
-  .menu {
-    height: 30px;
-    line-height: 30px;
+    .menu {
+        height: 30px;
+        line-height: 30px;
 
-    li {
-      float: left;
-      width: 10%;
-      text-align: center;
+        li {
+            float: left;
+            width: 14.2857%;
+            text-align: center;
 
-      a {
-        background: $basic;
-        color: $white;
-        display: block;
+            a {
+                background: $basic;
+                color: $white;
+                display: block;
 
-        &:hover {
-          background: $base-dark;
-          color: $white;
-          transition: background 0.15s ease-in-out, color 0.15s ease-in-out;
+                &:hover {
+                    background: $base-dark;
+                    color: $white;
+                    transition: background .15s ease-in-out, color .15s ease-in-out;
+                }
+            }
         }
-      }
     }
-  }
 
-  .search-bar {
-    height: 34px;
-    line-height: 34px;
-    padding: 0 20px;
-    border: 1px solid $basic;
-    border-top: none;
-    background: $white;
+    .search-bar {
+        height: 34px;
+        line-height: 34px;
+        padding: 0 20px;
+        border: 1px solid $basic;
+        border-top: none;
+        background: $white;
 
-    .text {
-      width: 100px;
+        .text {
+            width: 100px;
+        }
     }
-  }
 }
 
 .body {
-  padding: $gap 0;
+    padding: $gap 0;
 }
 
 .main {
-  width: 800px;
-  float: left;
-
-  .card {
-    width: 390px;
+    width: 800px;
     float: left;
-    margin-right: 8px;
-  }
+
+    .card {
+        width: 390px;
+        float: left;
+        margin-right: 8px;
+    }
 }
 
 .side {
-  width: 200px;
-  float: right;
+    width: 200px;
+    float: right;
 }
 
 .carousel {
-  height: 360px;
-
-  li {
     height: 360px;
-    text-align: center;
 
-    .helper {
-      display: inline-block;
-      height: 100%;
-      vertical-align: middle;
+    li {
+        height: 360px;
+        text-align: center;
+
+        .helper {
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
     }
-  }
 }
-
 // 留言板
+
 .msg-board {
     .btn {
         margin-top: $gap;
     }
 }
-
 // 图片新闻卡片
+
 .card-carousel {
     padding: 30px 4px;
 }
+
 .my-card {
     background: $white;
-    box-shadow: 3px 3px 3px $gray;
+    box-shadow: 3px 3px 3px #ccc;
     display: inline-block;
-    margin:  0 50px;
+    margin: 0 50px;
+
     img {
         width: 220px;
         height: 140px;
         overflow: hidden;
     }
+
     .my-body {
         padding: 10px 20px;
     }
+
     p {
         line-height: 24px;
         width: 180px;
@@ -226,19 +269,21 @@ a {
     text-align: center;
     margin-top: 30px;
 }
-
 // 列表页
 
 .news-list {
     padding: 0 20px;
+
     &.list.date li .date-span {
         right: 30px;
     }
 }
+
 .pagination {
     text-align: right;
     padding: 30px 20px 10px;
 }
+
 .page-btn {
     display: inline-block;
     width: 24px;
@@ -249,8 +294,9 @@ a {
     color: #DB2828;
     cursor: pointer;
     text-align: center;
-    transition: color ease-in-out 0.15s, background ease-in-out 0.15s;
+    transition: color ease-in-out .15s, background ease-in-out .15s;
     border-radius: 3px;
+
     &:hover {
         background: #DB2828;
         color: #fff;
@@ -260,20 +306,24 @@ a {
 .news-box {
     padding: 0 80px;
 }
+
 .news-title {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
     margin: 20px;
 }
+
 .news-detail {
     text-align: right;
 }
-.news-img img{
+
+.news-img img {
     margin: 30px auto;
     display: block;
     width: 600px;
 }
+
 .news-text {
     width: 100%;
     line-height: 24px;

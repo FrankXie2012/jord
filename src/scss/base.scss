@@ -1,5 +1,4 @@
 //颜色
-$teal: #00BA9E;
 $dark: #666;
 $white: #fff;
 $red: #DB2828;
@@ -18,31 +17,35 @@ $lightgray: #f7f7f9;
 $sk-sidebar-bg: #2e81d7;
 $sk-skyblue-bg: #6da7e3;
 $sk-sidebar-color: #bdcbd2; // 字体
-
 $basic: $red;
 $base-dark: $dark-red;
 $radius: 5px;
-$gap: 10px;
+$gap: 10px; // 工具类
 
-// 工具类
 .left {
     float: left;
 }
+
 .right {
     float: right;
 }
+
 .text-center {
     text-align: center;
 }
+
 .text-left {
     text-align: left;
 }
+
 .text-right {
     text-align: right;
 }
+
 .hidden {
     display: none;
 }
+
 .clearfix:after {
     content: ".";
     display: block;
@@ -50,13 +53,14 @@ $gap: 10px;
     clear: both;
     visibility: hidden;
 }
+
 .clearfix {
     *zoom: 1;
 }
+
 .full-width {
     width: 100%;
 }
-
 @mixin wh($w:100%,$h:100%) {
     width: $w;
     height: $h;
@@ -66,9 +70,8 @@ $gap: 10px;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-
-
 // 页面初始化
+
 blockquote,
 body,
 button,
