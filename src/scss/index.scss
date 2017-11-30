@@ -36,9 +36,62 @@
     border-radius: $radius;
     cursor: pointer;
 
+    &.search {
+        padding-left: 25px;
+        background: $basic url('../img/icons/Search.png') 5px center no-repeat;
+
+        &:hover {
+            background: $base-dark url('../img/icons/Search.png') 5px center no-repeat;
+        }
+    }
+
     &:hover {
         background: $base-dark;
         transition: background ease-in-out .15s;
+    }
+}
+
+i.icon {
+    display: inline-block;
+    vertical-align: middle;
+    height: 16px;
+    width: 16px;
+    margin-right: 5px;
+
+    &.arrange {
+        background: url("../img/icons/Arrange.png");
+    }
+
+    &.column {
+        background: url("../img/icons/Column.png");
+    }
+
+    &.front {
+        background: url("../img/icons/Front.png");
+    }
+
+    &.list {
+        background: url("../img/icons/List.png");
+    }
+
+    &.message {
+        background: url("../img/icons/Message.png");
+    }
+
+    &.mic {
+        background: url("../img/icons/Mic.png");
+    }
+
+    &.notes {
+        background: url("../img/icons/Notes.png");
+    }
+
+    &.right {
+        background: url("../img/icons/Right.png");
+    }
+
+    &.home {
+        background: url("../img/icons/131.gif");
     }
 }
 
@@ -60,10 +113,10 @@ a {
 
         a {
             padding-left: 20px;
-            background: url("../img/icon_dot.png") left center no-repeat;
+            background: url("../img/icons/059.gif") left center no-repeat;
 
             &:hover {
-                background-image: url("../img/ball.png");
+                background-image: url("../img/icons/055.gif");
             }
         }
     }
@@ -92,11 +145,10 @@ a {
                 border: 1px solid $basic;
                 color: $white;
                 border-radius: $radius;
-                text-indent: 30px;
+                padding-left: 10px;
 
                 &:hover {
-                    background: $white;
-                    color: $basic;
+                    background: $base-dark;
                 }
             }
         }
@@ -127,14 +179,14 @@ a {
         /* 标准的语法 */
         span {
             padding-left: 25px;
-            background: url("../img/icon_board.png") left center no-repeat;
+            background: url("../img/icons/icon_board.png") left center no-repeat;
             font-weight: bold;
             padding-right: 30px;
         }
 
         .card-tool {
             float: right;
-            color: $dark;
+            color: $black;
 
             &:hover {
                 color: $orange;
@@ -155,8 +207,8 @@ a {
     }
 
     .menu {
-        height: 30px;
-        line-height: 30px;
+        height: 45px;
+        line-height: 45px;
 
         li {
             float: left;
@@ -167,7 +219,9 @@ a {
                 background: $basic;
                 color: $white;
                 display: block;
+                font-size: 16px;
 
+                &.active,
                 &:hover {
                     background: $base-dark;
                     color: $white;
