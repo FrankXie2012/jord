@@ -200,10 +200,33 @@ a {
 }
 // 布局样式
 
+.banner {
+    width: 790px;
+    height: 75px;
+    margin-bottom: 10px;
+    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    clear: both;
+}
+
+.banner1 {
+    background-image: url("../img/banner1.jpg");
+}
+
+.banner2 {
+    background-image: url("../img/banner2.jpg");
+}
+
+.banner3 {
+    background-image: url("../img/banner3.jpg");
+}
+
 .header {
-    .banner {
-        height: 120px;
-        background: $basic url('../img/top.gif') center no-repeat;
+    .top-banner {
+        height: 150px;
+        background: $basic url('../img/top.jpg') center no-repeat;
     }
 
     .menu {
