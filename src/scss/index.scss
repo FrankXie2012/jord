@@ -164,45 +164,45 @@ a {
     background: $white;
     box-shadow: 3px 3px 3px #ccc;
 
-    .card-head {
-        height: 30px;
-        line-height: 30px;
-        padding: 0 10px;
-        color: $white;
-        background: -webkit-linear-gradient(left, $basic ,$white);
-        /* Safari 5.1 - 6.0 */
-        background: -o-linear-gradient(right, $basic, $white);
-        /* Opera 11.1 - 12.0 */
-        background: -moz-linear-gradient(right, $basic, $white);
-        /* Firefox 3.6 - 15 */
-        background: linear-gradient(to right, $basic ,$white);
-        /* 标准的语法 */
-        span {
-            padding-left: 25px;
-            background: url("../img/icons/icon_board.png") left center no-repeat;
-            font-weight: bold;
-            padding-right: 30px;
-        }
-
-        .card-tool {
-            float: right;
-            color: $black;
-
-            &:hover {
-                color: $orange;
-            }
-        }
-    }
-
     .card-body {
         padding: 10px;
+    }
+}
+
+.card-head {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    color: $white;
+    background: -webkit-linear-gradient(left, $basic ,$white);
+    /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, $basic, $white);
+    /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, $basic, $white);
+    /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, $basic ,$white);
+    /* 标准的语法 */
+    span {
+        padding-left: 25px;
+        background: url("../img/icons/icon_board.png") left center no-repeat;
+        font-weight: bold;
+        padding-right: 30px;
+    }
+
+    .card-tool {
+        float: right;
+        color: $black;
+
+        &:hover {
+            color: $orange;
+        }
     }
 }
 // 布局样式
 
 .banner {
     width: 790px;
-    height: 75px;
+    height: 80px;
     margin-bottom: 10px;
     background-size: 100%;
     background-size: cover;
@@ -288,6 +288,22 @@ a {
     float: right;
 }
 
+.top-box {
+    border: 1px solid #ccc;
+    padding: $gap $gap 0;
+    margin-bottom: 15px;
+    background-color: $white;
+    box-shadow: 3px 3px 3px #ccc;
+
+    .card {
+        box-shadow: none;
+    }
+
+    .news-more {
+        line-height: 38px;
+    }
+}
+
 .carousel {
     height: 360px;
 
@@ -301,6 +317,12 @@ a {
             vertical-align: middle;
         }
     }
+}
+
+.news-card {
+    height: 360px;
+    width: 340px;
+    float: right;
 }
 // 留言板
 

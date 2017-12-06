@@ -6,10 +6,6 @@ export {
 	carousel
 };
 
-// const init = () => {
-//     $('html').removeClass('hidden');
-// };
-
 const carousel = () => {
 	$('.carousel').unslider({
 		autoplay: true,
@@ -23,6 +19,11 @@ const carousel = () => {
 		nav: false,
 		arrows: false
 	});
+	$('.v-carousel').on('mouseover', function() {
+		$('.v-carousel').data('unslider').stop();
+	}).on('mouseout', function() {
+		$('.v-carousel').data('unslider').start();
+	});
 	$('.card-carousel').unslider({
 		autoplay: true,
 		nav: false,
@@ -30,5 +31,4 @@ const carousel = () => {
 	});
 };
 
-// init();
 carousel();

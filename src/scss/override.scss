@@ -1,14 +1,15 @@
-@import "base";
+@import "base"; // unslider样式重写
 
-// unslider样式重写
-.main .unslider {
-    width: 790px;
+.top-box > .unslider {
+    width: 620px;
+    float: left;
     background: $black;
     margin-bottom: $gap;
     overflow-x: hidden;
     position: relative;
 }
-.main .slider-title {
+
+.top-box .slider-title {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -16,32 +17,42 @@
     text-indent: 20px;
     color: $white;
     background: $black;
-    opacity: 0.7;
+    opacity: .7;
     width: 100%;
     text-align: left;
     font-size: 18px;
+
     &:hover {
         text-decoration: underline;
     }
 }
-.main .unslider-nav {
+
+.top-box .unslider-nav {
     position: absolute;
     bottom: 20px;
     right: 10px;
     z-index: 10;
+
     li {
         text-indent: 9999px;
     }
 }
 
-.side .unslider {
-    height: 240px;
-    line-height: 24px;
+.v-carousel {
+    height: 310px;
+    line-height: 26px;
+
     a {
-        width: 178px;
+        width: 255px;
         display: block;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        padding-right: 55px;
+
+        .date-span {
+            right: 0 !important;
+            color: $gray;
+        }
     }
 }
