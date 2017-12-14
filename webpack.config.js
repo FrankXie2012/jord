@@ -87,6 +87,11 @@ module.exports = {
             filename: 'news.html',
             chunks: ['index']
         }),
+        new HtmlWebpackPlugin({
+            template: __dirname + "/src/html/images.tmpl.html",
+            filename: 'images.html',
+            chunks: ['index']
+        }),
         // new webpack.optimize.UglifyJsPlugin({
         //     comments: false, //去掉注释
         //     compress: {
