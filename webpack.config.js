@@ -27,22 +27,22 @@ module.exports = {
 				loader: "babel-loader"
 			},
 			include: path.join(__dirname, 'src')
-			// }, {
-			//     test: /\.css$/,
-			//     use: [{
-			//         loader: "style-loader"
-			//     }, {
-			//         loader: "css-loader"
-			//     }]
-			// }, {
-			//     test: /\.scss$/,
-			//     use: [{
-			//         loader: "style-loader"
-			//     }, {
-			//         loader: "css-loader"
-			//     }, {
-			//         loader: "sass-loader"
-			//     }]
+				// }, {
+				//     test: /\.css$/,
+				//     use: [{
+				//         loader: "style-loader"
+				//     }, {
+				//         loader: "css-loader"
+				//     }]
+				// }, {
+				//     test: /\.scss$/,
+				//     use: [{
+				//         loader: "style-loader"
+				//     }, {
+				//         loader: "css-loader"
+				//     }, {
+				//         loader: "sass-loader"
+				//     }]
 		}, {
 			test: /\.css$/,
 			use: ExtractTextPlugin.extract({
@@ -90,6 +90,11 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: __dirname + "/src/html/images.tmpl.html",
 			filename: 'images.html',
+			chunks: ['index']
+		}),
+		new HtmlWebpackPlugin({
+			template: __dirname + "/src/html/image.tmpl.html",
+			filename: 'image.html',
 			chunks: ['index']
 		}),
 		new HtmlWebpackPlugin({

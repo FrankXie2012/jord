@@ -31,4 +31,21 @@ const carousel = () => {
 	});
 };
 
+const viewImg = () => {
+	let $images = $('.expand-img');
+	const $modal = $('#imgModal');
+	let $img = $('#imageInModal');
+	const $close = $modal.find('.close');
+
+	$images.off('click').on('click', function() {
+		$modal.show();
+		$img.attr('src', $(this).attr('src'));
+	});
+
+	$close.on('click', function() {
+		$modal.hide();
+	});
+};
+
 carousel();
+viewImg();
