@@ -183,6 +183,11 @@ a {
     /* Firefox 3.6 - 15 */
     background: linear-gradient(to right, $basic ,$white);
     /* 标准的语法 */
+    /* IE10+ */
+    background: -ms-linear-gradient(to right, $basic, $white);
+    /* IE8~IE9 */
+    background: #DB2828\9;
+
     span {
         padding-left: 25px;
         background: url("../img/icons/icon_board.png") left center no-repeat;
@@ -193,6 +198,8 @@ a {
     .card-tool {
         float: right;
         color: $black;
+        /* IE8~IE9 */
+        color: #fff\9;
 
         &:hover {
             color: $orange;
