@@ -508,3 +508,19 @@ a {
     clear: both;
     margin: 20px 0;
 }
+
+.admin-line {
+    line-height: 30px;
+    background: #fff;
+    text-align: right;
+    padding: 0 20px;
+    background: #DB2828;
+
+    .admin-link {
+        color: #fff;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

@@ -7,27 +7,38 @@ export {
 };
 
 const carousel = () => {
-	$('.carousel').unslider({
+	const $slider = $('.carousel').unslider({
 		autoplay: true,
 		animation: 'fade',
 		arrows: false
 	});
-	$('.v-carousel').unslider({
+	$slider.on('mouseover', function() {
+		$slider.data('unslider').stop();
+	}).on('mouseout', function() {
+		$slider.data('unslider').start();
+	});
+	const $vSlider = $('.v-carousel').unslider({
 		autoplay: true,
 		animation: 'vertical',
 		infinite: true,
 		nav: false,
-		arrows: false
+		arrows: false,
+		delay: 6000
 	});
-	$('.v-carousel').on('mouseover', function() {
-		$('.v-carousel').data('unslider').stop();
+	$vSlider.on('mouseover', function() {
+		$vSlider.data('unslider').stop();
 	}).on('mouseout', function() {
-		$('.v-carousel').data('unslider').start();
+		$vSlider.data('unslider').start();
 	});
-	$('.card-carousel').unslider({
+	const $cardSlider = $('.card-carousel').unslider({
 		autoplay: true,
 		nav: false,
 		arrows: false
+	});
+	$cardSlider.on('mouseover', function() {
+		$cardSlider.data('unslider').stop();
+	}).on('mouseout', function() {
+		$cardSlider.data('unslider').start();
 	});
 };
 
