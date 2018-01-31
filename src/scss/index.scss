@@ -488,17 +488,48 @@ a {
     text-align: right;
 }
 
-.news-img img {
-    margin: 30px auto;
-    display: block;
-    width: 600px;
-}
-
 .news-text {
     width: 100%;
-    line-height: 24px;
     font-size: 16px;
     white-space: pre-wrap;
+    /* css-3 */
+    white-space: -moz-pre-wrap;
+    /* Mozilla, since 1999 */
+    white-space: -pre-wrap;
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    word-wrap: break-word;
+    /* Internet Explorer 5.5+ */
+}
+
+.news-text h1, .news-text h2, .news-text h3, .news-text h4, .news-text h5, .news-text h6 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.news-text a {
+    color: $blue;
+    &:hover {
+        color: $orange;
+    }
+}
+
+.news-text img {
+    display: block;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+.news-text p, .news-text li {
+    line-height: 30px;
+    text-indent: 2em;
+}
+
+.news-text ol li {
+    margin-left: 15px;
 }
 
 .images-list {
