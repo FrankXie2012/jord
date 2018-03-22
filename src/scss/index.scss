@@ -434,10 +434,22 @@ a {
 }
 
 .footer {
-    height: 50px;
-    line-height: 50px;
+    line-height: 30px;
     text-align: center;
-    margin-top: 30px;
+    margin: 50px auto 30px;
+    width: 360px;
+    padding-left: 80px;
+    background: url('../img/red.png') left center no-repeat;
+
+    p {
+      text-align: left;
+    }
+
+    .visit-count {
+      background-color: $white;
+      padding: 2px 5px;
+      border: 1px solid #ccc;
+    }
 }
 // 列表页
 
