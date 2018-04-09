@@ -33,7 +33,9 @@ const carousel = () => {
 	const $cardSlider = $('.card-carousel').unslider({
 		autoplay: true,
 		nav: false,
-		arrows: false
+		arrows: false,
+		speed: 10000,
+		delay: 10000
 	});
 	$cardSlider.on('mouseover', function() {
 		$cardSlider.data('unslider').stop();

@@ -223,18 +223,25 @@ a {
     background-image: url("../img/banner1.jpg");
 }
 
-.banner2 {
-    background-image: url("../img/banner2.jpg");
-}
-
-.banner3 {
-    background-image: url("../img/banner3.jpg");
-}
+// .banner2 {
+//     background-image: url("../img/banner2.jpg");
+// }
+//
+// .banner3 {
+//     background-image: url("../img/banner3.jpg");
+// }
 
 .header {
+    margin-bottom: 10px;
+    background: $basic;
+
+    .box {
+        width: 1000px;
+        margin: 0 auto;
+    }
     .top-banner {
         height: 150px;
-        background: $basic url('../img/top.jpg') center no-repeat;
+        background: url('../img/banner.png') center no-repeat;
     }
 
     .menu {
@@ -433,13 +440,29 @@ a {
     cursor: pointer;
 }
 
-.footer {
-    line-height: 30px;
+.links {
+    background: #eeeeee;
+    width: 1000px;
+    margin: 80px auto 0;
+    line-height: 35px;
     text-align: center;
-    margin: 50px auto 30px;
-    width: 360px;
-    padding-left: 80px;
-    background: url('../img/red.png') left center no-repeat;
+    .divider {
+        margin: 0 20px;
+    }
+}
+
+.footer {
+    background: $white;
+    padding: 30px 0;
+    border-top: 2px solid #ccc;
+    .box {
+        line-height: 30px;
+        text-align: center;
+        margin: 0 auto;
+        width: 360px;
+        padding-left: 80px;
+        background: url('../img/red.png') left center no-repeat;
+    }
 
     p {
       text-align: left;
@@ -557,20 +580,4 @@ a {
     width: 100%;
     clear: both;
     margin: 20px 0;
-}
-
-.admin-line {
-    line-height: 30px;
-    background: #fff;
-    text-align: right;
-    padding: 0 20px;
-    background: #DB2828;
-
-    .admin-link {
-        color: #fff;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
 }
