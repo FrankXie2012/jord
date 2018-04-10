@@ -60,5 +60,12 @@ const viewImg = () => {
 	});
 };
 
+const createMap = (() => {
+	let map = new AMap.Map('map',{
+	    zoom: 12,
+	    center: [118.31, 27.02]
+	});
+})();
+
 carousel();
 viewImg();

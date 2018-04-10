@@ -60,7 +60,7 @@ $gap: 10px; // 工具类
 }
 
 .full-width {
-    width: 100%;
+    width: 100% !important;
 }
 @mixin wh($w:100%,$h:100%) {
     width: $w;

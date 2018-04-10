@@ -301,6 +301,9 @@ a {
 .side {
     width: 200px;
     float: right;
+    img {
+        width: 100%;
+    }
 }
 
 .top-box {
@@ -362,7 +365,7 @@ a {
     box-shadow: 3px 3px 3px #ccc;
     border: 1px solid #ccc;
     display: inline-block;
-    margin: 0 49px;
+    margin: 0 8px;
 
     img {
         width: 220px;
@@ -580,4 +583,8 @@ a {
     width: 100%;
     clear: both;
     margin: 20px 0;
+}
+
+.services img {
+    height: 39px;
 }
