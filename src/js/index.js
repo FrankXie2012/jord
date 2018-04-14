@@ -1,71 +1,99 @@
 import 'babel-polyfill';
 import 'unslider';
+import './fuckSlider';
 require('../scss/index.scss');
 
-export {
-	carousel
+// banner轮播
+var slider = function() {
+    var $slider = $('.carousel').unslider({
+        autoplay: true,
+        animation: 'fade',
+        arrows: false
+    });
+
+    $slider.on('mouseover', function() {
+        $slider.data('unslider').stop();
+    }).on('mouseout', function() {
+        $slider.data('unslider').start();
+    });
 };
 
-const carousel = () => {
-	const $slider = $('.carousel').unslider({
-		autoplay: true,
-		animation: 'fade',
-		arrows: false
-	});
-	$slider.on('mouseover', function() {
-		$slider.data('unslider').stop();
-	}).on('mouseout', function() {
-		$slider.data('unslider').start();
-	});
-	const $vSlider = $('.v-carousel').unslider({
-		autoplay: true,
-		animation: 'vertical',
-		infinite: true,
-		nav: false,
-		arrows: false,
-		delay: 6000
-	});
-	$vSlider.on('mouseover', function() {
-		$vSlider.data('unslider').stop();
-	}).on('mouseout', function() {
-		$vSlider.data('unslider').start();
-	});
-	const $cardSlider = $('.card-carousel').unslider({
-		autoplay: true,
-		nav: false,
-		arrows: false,
-		speed: 10000,
-		delay: 10000
-	});
-	$cardSlider.on('mouseover', function() {
-		$cardSlider.data('unslider').stop();
-	}).on('mouseout', function() {
-		$cardSlider.data('unslider').start();
-	});
+// 竖直新闻轮播
+var vSlider = function() {
+    var $vSlider = $('.v-carousel').unslider({
+        autoplay: true,
+        animation: 'vertical',
+        infinite: true,
+        nav: false,
+        arrows: false,
+        delay: 6000
+    });
+
+    $vSlider.on('mouseover', function() {
+        $vSlider.data('unslider').stop();
+    }).on('mouseout', function() {
+        $vSlider.data('unslider').start();
+    });
+}
+
+// 底部建瓯风土人情轮播
+var cardSlider = function() {
+    var $cardSlider = $('.card-carousel');
+
+    $cardSlider.fuckSlider({
+        speed: '30000'
+    });
+}
+
+// 查看图片
+var viewImage = function() {
+    let $images = $('.expand-img');
+    var $modal = $('#imgModal');
+    let $img = $('#imageInModal');
+    var $close = $modal.find('.close');
+
+    $images.off('click').on('click', function() {
+        $modal.show();
+        $img.attr('src', $(this).attr('src'));
+    });
+
+    $close.on('click', function() {
+        $modal.hide();
+    });
+}
+
+// tab切换
+var tab = function() {
+    $('.tab-head').children('.tab-btn').on('click', function() {
+        var _key = $(this).data('tab');
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.tab-body').children('.tab-box').hide();
+        $('.tab-body').children('.tab-box[data-tab="' + _key + '"]').show();
+    });
+    $('.tab-head').children('.tab-btn').first().trigger('click');
 };
 
-const viewImg = () => {
-	let $images = $('.expand-img');
-	const $modal = $('#imgModal');
-	let $img = $('#imageInModal');
-	const $close = $modal.find('.close');
-
-	$images.off('click').on('click', function() {
-		$modal.show();
-		$img.attr('src', $(this).attr('src'));
-	});
-
-	$close.on('click', function() {
-		$modal.hide();
-	});
+// 关闭页面
+var closePage = function() {
+    $('#closePage').on('click', function() {
+        window.close();
+    });
 };
 
-const createMap = (() => {
-	let map = new AMap.Map('map',{
-	    zoom: 12,
-	    center: [118.31, 27.02]
-	});
-})();
+var backToTop = function() {
+    $('#backToTop').off('click').on('click', function() {
+        $('html,body').animate({
+            scrollTop: 0
+        }, 700);
+    });
+};
 
-carousel();
-viewImg();
+var init = (function() {
+    slider();
+    vSlider();
+    cardSlider();
+    viewImage();
+    tab();
+    closePage();
+    backToTop();
+}());

@@ -250,7 +250,7 @@ a {
 
         li {
             float: left;
-            width: 14.2857%;
+            width: 12.5%;
             text-align: center;
 
             a {
@@ -570,6 +570,28 @@ a {
     margin-left: 15px;
 }
 
+.news-tools {
+    line-height: 30px;
+    margin: 50px 0 30px;
+    text-align: center;
+    .btn {
+        margin-left: 10px;
+        float: right;
+    }
+    .count {
+        float: left;
+        display: inline-block;
+        background: $white;
+        border: 1px solid $basic;
+        color: $basic;
+        font-weight: 400;
+        padding: 0 10px;
+        height: 24px;
+        line-height: 24px;
+        border-radius: $radius;
+    }
+}
+
 .images-list {
     margin: 10px 0;
 
@@ -587,4 +609,22 @@ a {
 
 .services img {
     height: 39px;
+}
+
+.tab-head {
+    .tab-btn {
+        display: inline-block;
+        border: 1px solid #ccc;
+        padding: 5px 15px;
+        border-radius: 3px;
+        cursor: pointer;
+        box-shadow: 3px 3px 3px #ccc;
+        margin-right: 10px;
+        &.active {
+            border-color: $blue;
+            color: $blue;
+            font-weight: bold;
+            box-shadow: none;
+        }
+    }
 }
