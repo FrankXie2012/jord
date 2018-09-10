@@ -9,7 +9,12 @@
 <body>
     <div class=header>
         <div class="box">
-            <div class=top-banner></div>
+            <!-- <div class=top-banner></div> -->
+            <!-- 9.7 -->
+            <object width="100%" id="flash">
+                <param name="movie" value="${require(`../img/jord.swf`)}">
+                <embed src="${require(`../img/jord.swf`)}" width="100%">
+            </object>
             <ul class=menu>
                 <li><a class="active" href="">首页</a></li>
                 <li><a href="list.html">人大概况</a></li>
@@ -35,7 +40,8 @@
                 <div class=carousel>
                     <ul>
                         <li><img src="${require(`../img/temp/1.jpg`)}"> <a href='news.html' target=_blank class=slider-title>出席建瓯市第十六届人民代表大会第二次会议的人大代表今天报到</a></li>
-                        <li><img src="http://image.liuxianan.com/201705/20170522_174552_468_0434.png"> <a href='news.html' target=_blank class=slider-title>常委会会议常委会会议常委会会议</a></li>
+                        <li><img src="http://image.liuxianan.com/201705/20170522_174552_468_0434.png"> <a href='news.html'
+                                target=_blank class=slider-title>常委会会议常委会会议常委会会议</a></li>
                         <li><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1516043618805&di=bc5185ab659d9e3d6464bb5fccd8c225&imgtype=0&src=http%3A%2F%2Fpic.lvmama.com%2Fuploads%2Fpc%2Fplace2%2F2016-07-06%2F0f35a657-50b6-4a09-83e4-32fb3ca2c0f7.jpg">
                             <a href='news.html' target=_blank class=slider-title>福州景色</a>
                         </li>
@@ -57,12 +63,15 @@
             </div>
             <div class=main>
                 <!-- 会议专题 -->
-                <a href=""><div class="banner banner1"></div></a>
+                <a href="">
+                    <div class="banner banner1"></div>
+                </a>
                 <div class=card>
                     <div class=card-head><span>选举任免</span> <a href="list.html" class=card-tool>更多 ></a></div>
                     <div class=card-body>
                         <ul class="list date">
-                            <li><a class="new" href="news.html" title="出席建瓯市第十六届人民代表大会第二次会议的人大代表今天报到">【聚焦两会】出席建瓯市第十六届人民代表大会第二次会议的人大代表今天报到</a> <span class=date-span>2017-12-25</span></li>
+                            <li><a class="new" href="news.html" title="出席建瓯市第十六届人民代表大会第二次会议的人大代表今天报到">【聚焦两会】出席建瓯市第十六届人民代表大会第二次会议的人大代表今天报到</a>
+                                <span class=date-span>2017-12-25</span></li>
                             <li><a href="news.html" title="新闻">新闻</a> <span class=date-span>2017-12-25</span></li>
                         </ul>
                     </div>
@@ -71,7 +80,8 @@
                     <div class=card-head><span>调研研讨</span> <a href="" class=card-tool>更多 ></a></div>
                     <div class=card-body>
                         <ul class="list date">
-                            <li><a class="new" href="news.html" title="出席建瓯市第十六届人民代表大会第二次会议的人大代表今天报到">【聚焦两会】出席建瓯市第十六届人民代表大会第二次会议的人大代表今天报到</a> <span class=date-span>2017-12-25</span></li>
+                            <li><a class="new" href="news.html" title="出席建瓯市第十六届人民代表大会第二次会议的人大代表今天报到">【聚焦两会】出席建瓯市第十六届人民代表大会第二次会议的人大代表今天报到</a>
+                                <span class=date-span>2017-12-25</span></li>
                         </ul>
                     </div>
                 </div>
@@ -127,6 +137,9 @@
                 </div>
             </div>
             <div class=side>
+                <a href="http://www.fjrd.gov.cn/fjrd/portalController.do?login" target="_blank">
+                    <img src="${require(`../img/services/duty.jpg`)}" style="margin-bottom: 10px;" />
+                </a>
                 <div class=card style="min-height: 311px;">
                     <div class=card-head><span>通知公告</span></div>
                     <div class=card-body>
@@ -150,9 +163,6 @@
                         </ul>
                     </div>
                 </div>
-                <a href="http://www.fjrd.gov.cn/fjrd/portalController.do?login" target="_blank">
-                    <img src="${require(`../img/services/duty.jpg`)}" style="margin-bottom: 10px;" />
-                </a>
                 <div class="card" style="min-height: 175px;">
                     <div class="card-head"><span>建瓯地图</span></div>
                     <div class="card-body">
@@ -195,19 +205,21 @@
                     </div>
                     <div class="tab-body">
                         <div class="tab-box" data-tab="1">
-                            <div class=card-carousel>
+                            <div class=card-carousel id="viewSlider">
                                 <ul>
                                     <li class="1">
                                         <div class=my-card><img src='http://c1-q.mafengwo.net/s7/M00/8B/9E/wKgB6lSXe4OAUbIFAAcBSuVUUuE082.png?imageMogr2%2Fthumbnail%2F%211020x540r%2Fgravity%2FCenter%2Fcrop%2F%211020x540%2Fquality%2F100'>
                                             <div class=my-body>
                                                 <p><b>光孝寺</b></p>
-                                                <p><a href="https://baike.baidu.com/item/%E5%BB%BA%E7%93%AF%E5%85%89%E5%AD%9D%E5%AF%BA/10342235?fr=aladdin" target="_blank">查看详情</a></p>
+                                                <p><a href="https://baike.baidu.com/item/%E5%BB%BA%E7%93%AF%E5%85%89%E5%AD%9D%E5%AF%BA/10342235?fr=aladdin"
+                                                        target="_blank">查看详情</a></p>
                                             </div>
                                         </div>
                                         <div class=my-card><img src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514285866914&di=8333ee9d9c30a564e7e64da8dc3d2245&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2Fd439b6003af33a87fbe67520cd5c10385343b504.jpg'>
                                             <div class=my-body>
                                                 <p><b>三江口</b></p>
-                                                <p><a href="https://baike.baidu.com/item/%E5%BB%BA%E7%93%AF/2882827?fr=aladdin" target="_blank">查看详情</a></p>
+                                                <p><a href="https://baike.baidu.com/item/%E5%BB%BA%E7%93%AF/2882827?fr=aladdin"
+                                                        target="_blank">查看详情</a></p>
                                             </div>
                                         </div>
                                         <div class=my-card><img src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514286005638&di=dfb4fde0bc510c01717e8af4c3b437a1&imgtype=0&src=http%3A%2F%2Fwww.jianou.gov.cn%2Fcms%2Fpages%2F820164505191930000%2Fimages%2F200910910294376925.jpg'>
@@ -233,27 +245,40 @@
                                         <div class=my-card><img src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514286058998&di=0a77012029e12ed2f947f0aff29c761d&imgtype=0&src=http%3A%2F%2Fwww.jianou.gov.cn%2Fcms%2Fpages%2F820166939861730004%2Fimages%2F20083711304839760.jpg'>
                                             <div class=my-body>
                                                 <p><b>黄华山</b></p>
-                                                <p><a href="https://baike.baidu.com/item/%E9%BB%84%E5%8D%8E%E5%B1%B1/24889" target="_blank">查看详情</a></p>
+                                                <p><a href="https://baike.baidu.com/item/%E9%BB%84%E5%8D%8E%E5%B1%B1/24889"
+                                                        target="_blank">查看详情</a></p>
                                             </div>
                                         </div>
                                         <div class=my-card><img src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514286099725&di=b7e093ba80e56f0bf5612ff846d86393&imgtype=0&src=http%3A%2F%2Fimages.fengjing.com%2FFckFiles%2F2%252879%2529.jpg'>
                                             <div class=my-body>
                                                 <p><b>归宗岩</b></p>
-                                                <p><a href="https://baike.baidu.com/item/%E5%BD%92%E5%AE%97%E5%B2%A9/3313812?fr=aladdin" target="_blank">查看详情</a></p>
+                                                <p><a href="https://baike.baidu.com/item/%E5%BD%92%E5%AE%97%E5%B2%A9/3313812?fr=aladdin"
+                                                        target="_blank">查看详情</a></p>
                                             </div>
                                         </div>
                                         <div class=my-card><img src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514286163112&di=2c6a7ef4d8375d806e0a08784c774008&imgtype=0&src=http%3A%2F%2Fwww.archcy.com%2Fuploads%2F118311%2F031.gif'>
                                             <div class=my-body>
                                                 <p><b>鼓楼</b></p>
-                                                <p><a href="https://baike.baidu.com/item/%E5%BB%BA%E7%93%AF%E9%BC%93%E6%A5%BC/8853552?fr=aladdin" target="_blank">查看详情</a></p>
+                                                <p><a href="https://baike.baidu.com/item/%E5%BB%BA%E7%93%AF%E9%BC%93%E6%A5%BC/8853552?fr=aladdin"
+                                                        target="_blank">查看详情</a></p>
                                             </div>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="tab-box" data-tab="2">2</div>
-                        <div class="tab-box" data-tab="3">3</div>
+                        <div class="tab-box" data-tab="2">
+                            <div class=card-carousel id="projectSlider">
+                                <ul>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-box" data-tab="3">
+                            <div class=card-carousel id="snackSlider">
+                                <ul>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

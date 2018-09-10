@@ -19,6 +19,8 @@ $sk-skyblue-bg: #6da7e3;
 $sk-sidebar-color: #bdcbd2; // 字体
 $basic: $red;
 $base-dark: $dark-red;
+// $basic: $red;
+// $base-dark: $dark-red;
 $radius: 5px;
 $gap: 10px; // 工具类
 
@@ -62,20 +64,23 @@ $gap: 10px; // 工具类
 .full-width {
     width: 100% !important;
 }
+
 .oh {
     overflow: hidden !important;
 }
-@mixin wh($w:100%,$h:100%) {
+
+@mixin wh($w:100%, $h:100%) {
     width: $w;
     height: $h;
 }
+
 @mixin toe {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-// 页面初始化
 
+// 页面初始化
 blockquote,
 body,
 button,
@@ -165,7 +170,7 @@ button,
 input,
 select,
 textarea {
-    font: 14px Verdana,Helvetica,Arial,sans-serif;
+    font: 14px Verdana, Helvetica, Arial, sans-serif;
     resize: none;
 }
 

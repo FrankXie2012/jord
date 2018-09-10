@@ -27,22 +27,22 @@ module.exports = {
 				loader: "babel-loader"
 			},
 			include: path.join(__dirname, 'src')
-				// }, {
-				//     test: /\.css$/,
-				//     use: [{
-				//         loader: "style-loader"
-				//     }, {
-				//         loader: "css-loader"
-				//     }]
-				// }, {
-				//     test: /\.scss$/,
-				//     use: [{
-				//         loader: "style-loader"
-				//     }, {
-				//         loader: "css-loader"
-				//     }, {
-				//         loader: "sass-loader"
-				//     }]
+			// }, {
+			//     test: /\.css$/,
+			//     use: [{
+			//         loader: "style-loader"
+			//     }, {
+			//         loader: "css-loader"
+			//     }]
+			// }, {
+			//     test: /\.scss$/,
+			//     use: [{
+			//         loader: "style-loader"
+			//     }, {
+			//         loader: "css-loader"
+			//     }, {
+			//         loader: "sass-loader"
+			//     }]
 		}, {
 			test: /\.css$/,
 			use: ExtractTextPlugin.extract({
@@ -56,7 +56,7 @@ module.exports = {
 				use: ['css-loader', 'sass-loader']
 			})
 		}, {
-			test: /\.(png|woff|woff2|eot|ttf|svg|jpg|gif)$/,
+			test: /\.(png|woff|woff2|eot|ttf|svg|jpg|gif|swf)$/,
 			use: [{
 				loader: 'url-loader',
 				options: {

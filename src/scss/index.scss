@@ -7,8 +7,8 @@
     width: 1000px;
     margin: 0 auto;
 }
-// 组件样式
 
+// 组件样式
 .text {
     height: 24px;
     line-height: 24px;
@@ -121,6 +121,7 @@ a {
             }
         }
     }
+
     // 带日期的列表
     &.date {
         li {
@@ -175,13 +176,13 @@ a {
     line-height: 30px;
     padding: 0 10px;
     color: $white;
-    background: -webkit-linear-gradient(left, $basic ,$white);
+    background: -webkit-linear-gradient(left, $basic, $white);
     /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(right, $basic, $white);
     /* Opera 11.1 - 12.0 */
     background: -moz-linear-gradient(right, $basic, $white);
     /* Firefox 3.6 - 15 */
-    background: linear-gradient(to right, $basic ,$white);
+    background: linear-gradient(to right, $basic, $white);
     /* 标准的语法 */
     /* IE10+ */
     background: -ms-linear-gradient(to right, $basic, $white);
@@ -206,8 +207,8 @@ a {
         }
     }
 }
-// 布局样式
 
+// 布局样式
 .banner {
     width: 790px;
     height: 80px;
@@ -230,15 +231,16 @@ a {
 // .banner3 {
 //     background-image: url("../img/banner3.jpg");
 // }
-
 .header {
     margin-bottom: 10px;
     background: $basic;
 
     .box {
-        width: 1000px;
+        // 9.7
+        // width: 1000px;
         margin: 0 auto;
     }
+
     .top-banner {
         height: 150px;
         background: url('../img/banner.png') center no-repeat;
@@ -301,6 +303,7 @@ a {
 .side {
     width: 200px;
     float: right;
+
     img {
         width: 100%;
     }
@@ -347,15 +350,15 @@ a {
     width: 340px;
     float: right;
 }
-// 留言板
 
+// 留言板
 .msg-board {
     .btn {
         margin-top: $gap;
     }
 }
-// 图片新闻卡片
 
+// 图片新闻卡片
 .card-carousel {
     padding: 30px 4px;
 }
@@ -412,9 +415,9 @@ a {
     /* Full height */
     overflow: auto;
     /* Enable scroll if needed */
-    background-color: rgb(0,0,0);
+    background-color: rgb(0, 0, 0);
     /* Fallback color */
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0, 0, 0, 0.9);
     /* Black w/ opacity */
 }
 
@@ -449,6 +452,7 @@ a {
     margin: 80px auto 0;
     line-height: 35px;
     text-align: center;
+
     .divider {
         margin: 0 20px;
     }
@@ -458,6 +462,7 @@ a {
     background: $white;
     padding: 30px 0;
     border-top: 2px solid #ccc;
+
     .box {
         line-height: 30px;
         text-align: center;
@@ -468,17 +473,17 @@ a {
     }
 
     p {
-      text-align: left;
+        text-align: left;
     }
 
     .visit-count {
-      background-color: $white;
-      padding: 2px 5px;
-      border: 1px solid #ccc;
+        background-color: $white;
+        padding: 2px 5px;
+        border: 1px solid #ccc;
     }
 }
-// 列表页
 
+// 列表页
 .news-list {
     padding: 0 20px;
 
@@ -541,13 +546,19 @@ a {
     /* Internet Explorer 5.5+ */
 }
 
-.news-text h1, .news-text h2, .news-text h3, .news-text h4, .news-text h5, .news-text h6 {
+.news-text h1,
+.news-text h2,
+.news-text h3,
+.news-text h4,
+.news-text h5,
+.news-text h6 {
     text-align: center;
     margin-bottom: 50px;
 }
 
 .news-text a {
     color: $blue;
+
     &:hover {
         color: $orange;
     }
@@ -561,7 +572,8 @@ a {
     max-width: 100%;
 }
 
-.news-text p, .news-text li {
+.news-text p,
+.news-text li {
     line-height: 30px;
     text-indent: 2em;
 }
@@ -574,10 +586,12 @@ a {
     line-height: 30px;
     margin: 50px 0 30px;
     text-align: center;
+
     .btn {
         margin-left: 10px;
         float: right;
     }
+
     .count {
         float: left;
         display: inline-block;
@@ -620,6 +634,7 @@ a {
         cursor: pointer;
         box-shadow: 3px 3px 3px #ccc;
         margin-right: 10px;
+
         &.active {
             border-color: $blue;
             color: $blue;
